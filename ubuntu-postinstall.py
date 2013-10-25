@@ -27,3 +27,20 @@ _FOR_UBUNTU = "saucy"
 _DEBUG = 1
 _LOG_FILE = "/tmp/%s.log" % __appname__
 _CONF_FILE = "https://raw.github.com/shiquanwang/ubuntu-postinstall/master/ubuntu-13.10-unity-postinstall.cfg"
+
+
+# Classes
+
+class colors:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    BLUE = '\033[94m'
+    ORANGE = '\033[93m'
+    NO = '\033[0m'
+
+    def disable(self):
+        self.RED = ''
+        self.GREEN = ''
+        self.BLUE = ''
+        self.ORANGE = ''
+        self.NO = ''
