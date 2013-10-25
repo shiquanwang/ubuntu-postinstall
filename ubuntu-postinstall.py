@@ -44,3 +44,14 @@ class colors:
         self.BLUE = ''
         self.ORANGE = ''
         self.NO = ''
+
+
+# Functions
+
+def main():
+
+
+# Main program
+
+if __name__ == "__main__":
+    main()
