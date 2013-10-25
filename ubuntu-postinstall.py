@@ -21,6 +21,9 @@ Post installation script for Ubuntu
 """
 
 
+import argparse
+
+
 # Global variables
 
 _FOR_UBUNTU = "saucy"
@@ -49,7 +52,23 @@ class colors:
 # Functions
 
 def main():
-
+    """
+    Utility for Ubuntu post installation.
+    See more using ubuntu-postinstall.py --help
+    """
+    # create parser
+    parser = argparse.ArgumentParser()
+    # argument for configuration file
+    parser.add_argument('-c', '--conf', type=str,
+                        help='Ubuntu post installation configuration file.')
+    # argument group for scene/module selection
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('-s', '--scene', type=str,
+                       help='The scene to be installed.')
+    group.add_argument('-m', '--module', type=str,
+                       help='The module to be installed.')
+    # parse args
+    args = parser.parse_args()
 
 # Main program
 
