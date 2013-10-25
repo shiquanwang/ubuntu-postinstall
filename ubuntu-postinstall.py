@@ -67,6 +67,10 @@ def main():
                        help='The scene to be installed.')
     group.add_argument('-m', '--module', type=str,
                        help='The module to be installed.')
+    # argument for version
+    parser.add_argument('--version', action='version',
+                        version='{0} Version {1}'.format(
+                            __appname__, __version__))
     # parse args
     args = parser.parse_args()
 
