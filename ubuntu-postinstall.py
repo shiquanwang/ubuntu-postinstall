@@ -59,7 +59,7 @@ def main():
     # create parser
     parser = argparse.ArgumentParser()
     # argument for configuration file
-    parser.add_argument('-c', '--conf', type=str,
+    parser.add_argument('-c', '--conf', type=str, required=True,
                         help='Ubuntu post installation configuration file.')
     # argument group for scene/module selection
     group = parser.add_mutually_exclusive_group()
