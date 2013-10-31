@@ -65,7 +65,7 @@ def main():
     group = parser.add_mutually_exclusive_group()
     group.add_argument('-s', '--scene', type=str,
                        help='The scene to be installed.')
-    group.add_argument('-m', '--module', type=str,
+    group.add_argument('-m', '--module', type=str, action='append',
                        help='The module to be installed.')
     # argument for version
     parser.add_argument('--version', action='version',
