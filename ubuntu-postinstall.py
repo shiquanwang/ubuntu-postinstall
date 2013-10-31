@@ -22,6 +22,7 @@ Post installation script for Ubuntu
 
 
 import argparse
+import sys
 
 
 # Global variables
@@ -77,4 +78,4 @@ def main():
 # Main program
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
