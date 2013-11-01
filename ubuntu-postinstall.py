@@ -22,6 +22,7 @@ Post installation script for Ubuntu
 
 
 import argparse
+import os
 import sys
 
 
@@ -51,6 +52,14 @@ class colors:
 
 
 # Functions
+
+def isroot():
+    """
+    Check if the user is root.
+    Return TRUE if user is root.
+    """
+    return (os.geteuid() == 0)
+
 
 def main():
     """
