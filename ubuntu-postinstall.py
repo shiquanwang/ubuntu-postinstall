@@ -152,6 +152,15 @@ def main():
     # parse args
     args = parser.parse_args()
 
+    # are you root
+    if (not isroot()):
+        showexec(_("Script should be run as root"), "tpastroot", exitonerror = 1)
+
+    # read the configuration file
+    config = configparser.ConfigParser()
+    config.read(config_file)
+
+
 # Main program
 
 if __name__ == "__main__":
